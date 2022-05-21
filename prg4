@@ -1,0 +1,98 @@
+import java.io.*;
+import java.util.Scanner;
+class Matsum
+{
+    public static void main(String[] args) 
+{
+        Scanner s = new Scanner(System.in);
+        System.out.print("\nEnter the Number of Rows: ");
+        int r = s.nextInt();
+        System.out.print("\nEnter the Number of Columns: ");
+        int c = s.nextInt();;
+        int[][] m1 = new int[r][c];
+        int[][] m2 = new int[r][c];
+		int[][] s1 = new int[r][c];
+        System.out.println("\nEnter the Elements of Matrix1 : ");
+        for (int i = 0; i < r; i++)
+		{
+            for (int j = 0; j < c; j++) 
+			{
+                m1[i][j] = s.nextInt();
+            }
+        }
+		System.out.println("\nEnter the Elements of Matrix2 : ");
+		 for (int i = 0; i < r; i++)
+		{
+            for (int j = 0; j < c; j++) 
+			{
+                m2[i][j] = s.nextInt();
+            }
+        }
+        System.out.println("\nMatrix1\n");
+        for (int i = 0; i < r; i++)
+		{
+            for (int j = 0; j < c; j++) 
+			{
+                System.out.print(m1[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+		System.out.println("\nMatrix2\n");
+        for (int i = 0; i < r; i++)
+		{
+            for (int j = 0; j < c; j++) 
+			{
+                System.out.print(m2[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+		for (int i = 0; i < c; i++)
+         {
+            for (int j = 0; j < r; j++) 
+             {
+			 s1[i][j]=m1[i][j]+m2[i][j];
+			 }
+		 }
+		 System.out.println("\nSum\n");
+        for (int i = 0; i < r; i++)
+		{
+            for (int j = 0; j < c; j++) 
+			{
+                System.out.print(s1[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+	}
+}	
+Output
+------
+C:\Users\USER\Desktop>javac Matsum.java
+
+C:\Users\USER\Desktop>java Matsum
+
+Enter the Number of Rows: 2
+
+Enter the Number of Columns: 2
+
+Enter the Elements of Matrix1 :
+3 4 5 6
+
+Enter the Elements of Matrix2 :
+5 6 3 5
+
+Matrix1
+
+3 4
+5 6
+
+Matrix2
+
+5 6
+3 5
+
+Sum
+
+8 10
+8 11
+	
+		 

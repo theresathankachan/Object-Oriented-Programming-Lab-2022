@@ -46,9 +46,9 @@ class Matsum
             }
             System.out.print("\n");
         }
-		for (int i = 0; i < c; i++)
+		for (int i = 0; i < r; i++)
          {
-            for (int j = 0; j < r; j++) 
+            for (int j = 0; j < c; j++) 
              {
 			 s1[i][j]=m1[i][j]+m2[i][j];
 			 }

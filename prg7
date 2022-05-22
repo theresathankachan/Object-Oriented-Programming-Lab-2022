@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class Strmanip
+{
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		String a,b,c;
+		System.out.print("Enter a string:");
+		a=s.next();
+		System.out.print("Enter another string:");
+		b=s.next();
+		c=a+" "+b;
+		System.out.println("Length of 1st String: " + a.length());
+		System.out.println("Length of 2nd String: " + b.length());
+		System.out.println("Concatenate of Strings: " +c);
+	    System.out.println("Character at position 5 of "+c+":"+c.charAt(5));
+		System.out.println("Comaparison of Strings:"+a.compareTo(b));
+	    System.out.println("last index of 's' is :" + c.lastIndexOf('s'));
+		System.out.println("EndsWith character 'r': " + c.endsWith("r"));
+		System.out.println("Conversion to UpperCase: " + c.toUpperCase());
+		System.out.println("Conversion to LowerCase:" + c.toLowerCase());
+	}
+}
+Output
+-------
+C:\Users\USER\Desktop\java>javac Strmanip.java
+C:\Users\USER\Desktop\java>java Strmanip
+Enter a string:mesmerizing
+Enter another string:world
+Length of 1st String: 11
+Length of 2nd String: 5
+Concatenate of Strings: mesmerizing world
+Character at position 5 of mesmerizing world:r
+Comaparison of Strings:-10
+last index of 's' is :2
+EndsWith character 'r': false
+Conversion to UpperCase: MESMERIZING WORLD
+Conversion to LowerCase:mesmerizing world

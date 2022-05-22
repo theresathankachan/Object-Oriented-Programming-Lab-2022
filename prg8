@@ -1,0 +1,75 @@
+import java.util.Scanner;
+class Employee
+{
+	int eNo;
+	String eName; 
+	double salary;
+	void  details()
+	 {
+	   Scanner s=new Scanner(System.in);
+	   System.out.println("Enter the Employee ID");
+	   eNo = s.nextInt();
+	   System.out.println("Enter the Name of the Employee");
+	   eName = s.next();
+	   System.out.println ("Enter the salary");
+	   salary=s.nextDouble(); 
+	 }
+
+	void display()
+    {
+    	   System.out.println("---------------------------------------------");
+           System.out.println("|   eNo     "+"|   eName   "+"|  salary  "+"|");
+		   System.out.println("|  "+eNo+"      |    "+eName+"    | "+salary+"   |");
+	     
+    }
+}
+      
+class Arrayob
+{
+  public static void main(String[] args)
+     {
+	 	Scanner s = new Scanner(System.in);
+		System.out.println("Enter the number of Employees");
+        int n=s.nextInt();
+        Employee a[]=new Employee[n];
+        for(int i=0;i<n;i++)
+          {
+          	 a[i]=new Employee();
+          	 a[i].details();
+          }
+		System.out.println("Enter the code of employee");
+        int m=s.nextInt();
+        for(int i=0;i<n;i++)
+           {
+		     if(a[i].eNo==m)
+			 {
+              a[i].display();
+            }
+            
+     }
+
+}  
+}
+Output
+--------
+C:\Users\USER\Desktop\java>javac Arrayob.java
+C:\Users\USER\Desktop\java>java Arrayob
+Enter the number of Employees
+2
+Enter the Employee ID
+123
+Enter the Name of the Employee
+Ammu
+Enter the salary
+4567
+Enter the Employee ID
+456
+Enter the Name of the Employee
+Anu
+Enter the salary
+2387
+Enter the code of employee
+456
+------------------------------------
+|   eNo     |   eName   |  salary  |
+|  456      |    Anu    | 2387.0   |

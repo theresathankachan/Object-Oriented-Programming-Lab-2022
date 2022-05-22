@@ -39,7 +39,7 @@ class Ares
  		Scanner s=new Scanner(System.in);
  		System.out.println();
  		System.out.println("1.Area of Square");
- 		System.out.println("2.Area of Rectangule");
+ 		System.out.println("2.Area of Rectangle");
  		System.out.println("3.Area of Circle");
 		System.out.println("4.Area of Triangle");
 		System.out.println("Enter your choice:");
@@ -89,7 +89,7 @@ C:\Users\USER\Desktop\java>javac Shaparea.java
 C:\Users\USER\Desktop\java>java Shaparea
 
 1.Area of Square
-2.Area of Rectangule
+2.Area of Rectangle
 3.Area of Circle
 4.Area of Triangle
 Enter your choice:
@@ -103,7 +103,7 @@ C:\Users\USER\Desktop\java>javac Shaparea.java
 C:\Users\USER\Desktop\java>java Shaparea
 
 1.Area of Square
-2.Area of Rectangule
+2.Area of Rectangle
 3.Area of Circle
 4.Area of Triangle
 Enter your choice:
@@ -116,7 +116,7 @@ C:\Users\USER\Desktop\java>javac Shaparea.java
 C:\Users\USER\Desktop\java>java Shaparea
 
 1.Area of Square
-2.Area of Rectangule
+2.Area of Rectangle
 3.Area of Circle
 4.Area of Triangle
 Enter your choice:
@@ -130,7 +130,7 @@ C:\Users\USER\Desktop\java>javac Shaparea.java
 C:\Users\USER\Desktop\java>java Shaparea
 
 1.Area of Square
-2.Area of Rectangule
+2.Area of Rectangle
 3.Area of Circle
 4.Area of Triangle
 Enter your choice:

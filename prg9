@@ -1,0 +1,139 @@
+import java.io.*;
+import java.util.Scanner;
+
+class Ares
+{
+
+  double area(float a)
+   {
+   	
+   	 float area=a*a;
+   	 return area;
+   }
+
+   double area(double l,double b)
+   {
+   	 
+   	 double area=l*b;
+   	 return area;
+   }
+
+   double area(double r)
+   {
+   	 
+   	  double area=3.14*r*r;
+   	 return area;
+   }
+   double area(double a,double b,double c)
+   {
+	   double s=(a+b+c)/2;
+	   double area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+	   return area;
+   }
+}
+ class Shaparea
+ {
+ 	public static void main(String[] args) throws IOException
+ 	{
+ 		Ares arsh =new Ares();
+ 		Scanner s=new Scanner(System.in);
+ 		System.out.println();
+ 		System.out.println("1.Area of Square");
+ 		System.out.println("2.Area of Rectangule");
+ 		System.out.println("3.Area of Circle");
+		System.out.println("4.Area of Triangle");
+		System.out.println("Enter your choice:");
+        int n=s.nextInt();
+         
+         switch(n)
+         {
+         	case 1:
+         	       System.out.print("Enter the side of the square:");
+ 		           float a=s.nextFloat();
+ 		           System.out.println();
+                   double sqr=arsh.area(a);
+                   System.out.println("Area of Square:"+sqr);
+                   break;
+
+         	case 2:
+         	       System.out.print("Enter length,breadth of the Rectangle:");
+ 		           double l=s.nextDouble();
+ 		           double b=s.nextDouble();
+                   double rect=arsh.area(l,b);
+                   System.out.println("Area of Rectangle:"+rect);
+                   break;
+        
+         	case 3: System.out.print("Enter radius of circle:");
+ 		            double r=s.nextDouble();
+     			    System.out.println();
+                    double cir=arsh.area(r);
+                    System.out.println("Area of Circle:"+cir);
+                    break;
+			case 4:System.out.print("Enter three sides of the Triangle:");
+ 		           double f=s.nextDouble();
+ 		           double h=s.nextDouble();
+				   double t=s.nextDouble();
+                   double trin=arsh.area(f,h,t);
+                   System.out.println("Area of Triangle:"+trin);
+                   break;
+            default:System.out.println("Invalid option");        
+         }
+
+ 		
+ 	}
+ }
+ Output
+---------------
+C:\Users\USER\Desktop\java>javac Shaparea.java
+
+C:\Users\USER\Desktop\java>java Shaparea
+
+1.Area of Square
+2.Area of Rectangule
+3.Area of Circle
+4.Area of Triangle
+Enter your choice:
+1
+Enter the side of the square:5
+
+Area of Square:25.0
+
+C:\Users\USER\Desktop\java>javac Shaparea.java
+
+C:\Users\USER\Desktop\java>java Shaparea
+
+1.Area of Square
+2.Area of Rectangule
+3.Area of Circle
+4.Area of Triangle
+Enter your choice:
+2
+Enter length,breadth of the Rectangle:5 4
+Area of Rectangle:20.0
+
+C:\Users\USER\Desktop\java>javac Shaparea.java
+
+C:\Users\USER\Desktop\java>java Shaparea
+
+1.Area of Square
+2.Area of Rectangule
+3.Area of Circle
+4.Area of Triangle
+Enter your choice:
+3
+Enter radius of circle:5
+
+Area of Circle:78.5
+
+C:\Users\USER\Desktop\java>javac Shaparea.java
+
+C:\Users\USER\Desktop\java>java Shaparea
+
+1.Area of Square
+2.Area of Rectangule
+3.Area of Circle
+4.Area of Triangle
+Enter your choice:
+4
+Enter three sides of the Triangle:3 4 5
+Area of Triangle:6.0

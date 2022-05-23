@@ -1,0 +1,125 @@
+import java.util.*;
+class Person
+{
+	String Name,Gender,Address;
+	int Age;
+	Person(String n,String g,String add,int a)
+	{
+		Name=n;
+		Gender=g;
+		Address=add;
+		Age=a;
+	}
+}	
+class Employee extends Person
+{
+	int Empid,Salary;
+	String Company_name,Qualification;
+	Employee(String n,String g,String add,int a,int e,String c,String q,int sal)
+	{
+		super(n,g,add,a);
+		Empid=e;
+		Company_name=c;
+		Qualification=q;
+		Salary=sal;
+	}
+	
+}
+class Teachers extends Employee
+{
+	String Subject,Department;
+	int Teacherid;
+	Teachers(String n,String g,String add,int a,int e,String c,String q,int sal,int t,String s,String d)
+	{
+		super(n,g,add,a,e,c,q,sal);
+		Subject=s;
+		Teacherid=t;
+		Department=d;
+	}
+	void display()
+	{
+		System.out.println("|  Name    "+"| Gender  "+"| Address                "+"| Age  "+"| Empid   "+"| Salary  "+"|  Company_name  "+"| Teacherid"+"| Qualification"+"| Subject"+"| Department|");
+		System.out.println("| "+Name+"  |  "+Gender+"  | "+Address+"            |  "+Age+"  |  "+Empid+"  |  "+Salary+"   |  "+Company_name+"       |  "+Teacherid+"  |  "+Qualification+"     |  "+Subject+"    |  "+Department);
+	}
+	public static void main(String args[])
+	{
+		Scanner s=new Scanner(System.in);
+		int i,m;
+		System.out.print("Enter the number of Teachers:");
+		m=s.nextInt();
+		Teachers a[]=new Teachers[m];
+		for(i=0;i<m;i++)
+		{
+			System.out.println("\nName: ");
+            String  nam=s.next();
+            System.out.println("\n Gender: ");
+            String gen =s.next();
+            System.out.println("\n Address: ");
+            String ad =s.next();
+            System.out.println("\n Age: ");
+            int  ag=s.nextInt();
+            System.out.println("\nEmployee id: ");
+            int eid =s.nextInt();
+            System.out.println("\n Company name: ");
+            String cn =s.next();
+            System.out.println("\n Qualification: ");
+            String qual =s.next();
+            System.out.println("\n Salary: ");
+            int sa =s.nextInt();
+            System.out.println("\n Subject: ");
+            String sub =s.next();
+            System.out.println("\n Department: ");
+            String dep =s.next();
+            System.out.println("\n Teacher Id: ");
+            int tid =s.nextInt();
+            a[i]=new Teachers(nam,gen,ad,ag,eid,cn,qual,sa,tid,sub,dep);
+	    }
+	    System.out.println("Information of Teachers:");
+		for(i=0;i<m;i++)
+		{
+			a[i].display();
+	    }
+}
+}
+OUTPUT
+---------
+C:\Users\USER\Desktop\java>javac Teachers.java
+
+C:\Users\USER\Desktop\java>java Teachers
+Enter the number of Teachers:1
+
+Name:
+ANUMOL
+
+ Gender:
+FEMALE
+
+ Address:
+PULLOKKARAN
+
+ Age:
+22
+
+Employee id:
+1234
+
+ Company name:
+INFOSYS
+
+ Qualification:
+BSc
+
+ Salary:
+22000
+
+ Subject:
+PROGRAMMING
+
+ Department:
+IT
+
+ Teacher Id:
+2434
+Information of Teachers:
+|  Name    | Gender  | Address                | Age  | Empid   | Salary  |  Company_name  | Teacherid| Qualification| Subject| Department|
+| ANUMOL  |  FEMALE  | PULLOKKARAN            |  22  |  1234  |  22000   |  INFOSYS       |  2434  |  BSc     |  PROGRAMMING    |  IT

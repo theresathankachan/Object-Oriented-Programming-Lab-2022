@@ -1,0 +1,89 @@
+import java.util.Scanner;
+class fibno implements Runnable
+{
+   int n,p;
+	
+	Thread t;
+	fibno(int n)	
+        {
+          this.n=n;
+          t=new Thread(this);
+		  t.start();
+        } 
+	public void run()
+        { 
+				int f1=0,f2=1,f3;
+			for(int i=0;i<=n;i++)
+                { 
+			     System.out.println("fibo:"+f1);
+			     f3=f1+f2;
+				 f1=f2;f2=f3;
+			}
+		  }
+              }
+
+class even_number implements Runnable
+{
+   int n;Thread a;
+	even_number(int n)	
+        {
+          this.n=n;
+          a=new Thread(this);
+		  a.start();
+        } 
+	public void run()
+        {   
+			for(int i=0;i<=n;i+=2)
+
+                         { 
+						 if(i%2==0)
+							 System.out.println("Even numbers:"+ i );
+
+			}
+		}
+	
+	}
+
+class Fibeventhread
+{ 
+   public static void main(String args[]){
+    Scanner S=new Scanner(System.in);
+	System.out.println("Enter the limit:");
+	int num = S.nextInt();
+	fibno f=new fibno(num);
+	even_number mt=new even_number(num);try
+		{
+			Thread.sleep(500);
+		}
+		catch(InterruptedException e)
+		{
+		  System.out.println("Interrupted Exception");
+		}
+		try
+		{
+			f.t.join();
+			mt.a.join();
+		}
+		catch(InterruptedException e)
+		{
+		  System.out.println("Interrupted Exception");
+		}
+	
+   }
+}
+output
+-------
+C:\Users\USER\Desktop\java>javac Fibeventhread.java
+
+C:\Users\USER\Desktop\java>java Fibeventhread
+Enter the limit:
+5
+fibo:0
+fibo:1
+Even numbers:0
+fibo:1
+fibo:2
+Even numbers:2
+fibo:3
+Even numbers:4
+fibo:5

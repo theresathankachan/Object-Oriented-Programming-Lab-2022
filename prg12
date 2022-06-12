@@ -118,3 +118,61 @@ public class Packarea {
 	}
 	}
 }
+**output**
+-----------
+C:\Users\USER\Desktop\java>javac -d . Packarea.java
+
+C:\Users\USER\Desktop\java>java Graphics.Packarea
+****MENU*****
+1.Circle
+2.Rectangle
+3.Triangle
+4.Square
+5.Exit
+Enter your choice:1
+Enter the radius of circle:
+5
+Area of Circle: 78.53981633974483
+****MENU*****
+1.Circle
+2.Rectangle
+3.Triangle
+4.Square
+5.Exit
+Enter your choice:2
+Enter the length of Rectangle:
+4
+Enter the breadth of Rectangle:
+5
+Area of Rectangle: 20.0
+****MENU*****
+1.Circle
+2.Rectangle
+3.Triangle
+4.Square
+5.Exit
+Enter your choice:3
+Enter the first side of Triangle:
+4
+Enter the second side of Triangle:
+5
+Enter the third side of Triangle:
+6
+Area of Triangle: 9.921567416492215
+****MENU*****
+1.Circle
+2.Rectangle
+3.Triangle
+4.Square
+5.Exit
+Enter your choice:4
+Enter the length of Square:
+5
+Area of Rectangle: 25.0
+****MENU*****
+1.Circle
+2.Rectangle
+3.Triangle
+4.Square
+5.Exit
+Enter your choice:5

@@ -1,0 +1,120 @@
+package Graphics;
+import java.util.Scanner;
+interface Rect{
+	double rarea();
+}
+interface Trian{
+	double tarea();
+}
+interface Squar{
+	double sarea();
+}
+interface Cir{
+	double carea();
+}
+class Rectangle implements Rect {
+
+	double length;
+	double breadth;
+
+    public Rectangle(double length, double breadth) {
+		this.length = length;
+		this.breadth = breadth;
+	}
+	public double rarea() {
+
+		return length * breadth;
+	}
+	
+}
+class Triangle implements Trian {
+
+	double s1;
+	double s2;
+    double s3;
+	public Triangle(double s1, double s2,double s3) {
+		this.s1 = s1;
+		this.s2 = s2;
+		this.s3 = s3;
+	}
+	public double tarea() {
+
+	   double s=(s1+s2+s3)/2;
+	   double area=Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));
+	   return area;
+}
+}
+class Square implements Squar {
+
+	double length;
+	public Square(double length) {
+		this.length = length;
+	}
+	public double sarea() {
+
+		return length * length;
+	}
+}
+
+class Circle implements Cir{
+
+	double radius;
+
+	public Circle(double radius) {
+		this.radius = radius;
+		}
+	public double carea() {
+
+		return Math.PI * radius * radius;
+	}
+}
+public class Packarea {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int m,i;
+		double r,l,b,h;
+		while(true)
+		{
+		System.out.print("****MENU*****");
+		System.out.print("\n1.Circle");
+		System.out.print("\n2.Rectangle");
+		System.out.print("\n3.Triangle");
+		System.out.print("\n4.Square");
+		System.out.print("\n5.Exit");
+		System.out.print("\nEnter your choice:");
+		m=sc.nextInt();
+		switch(m)
+		{
+			case 1:System.out.println("Enter the radius of circle:");
+			       r=sc.nextDouble();
+				   Circle c = new Circle(r);
+				   System.out.println("Area of Circle: " + c.carea());
+				   break;
+		    case 2:System.out.println("Enter the length of Rectangle:");
+			       l=sc.nextDouble();
+				   System.out.println("Enter the breadth of Rectangle:");
+				   b=sc.nextDouble();
+				   Rectangle e = new Rectangle(l,b);
+				   System.out.println("Area of Rectangle: " + e.rarea());
+				   break;
+			case 3:System.out.println("Enter the first side of Triangle:");
+			       l=sc.nextDouble();
+				   System.out.println("Enter the second side of Triangle:");
+				   b=sc.nextDouble();
+				   System.out.println("Enter the third side of Triangle:");
+				   h=sc.nextDouble();
+				   Triangle t = new Triangle(l,b,h);
+				   System.out.println("Area of Triangle: " + t.tarea());
+				   break;
+            case 4:System.out.println("Enter the length of Square:");
+			       l=sc.nextDouble();
+				   Square sq = new Square(l);
+				   System.out.println("Area of Rectangle: " + sq.sarea());
+				   break;				   
+		    case 5:	System.exit(0);
+			       break;
+		}
+	}
+	}
+}
